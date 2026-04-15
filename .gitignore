@@ -1,5 +1,14 @@
-# Local source archives stay in the workspace, not in GitHub.
+﻿# Local source archives stay in the workspace, not in GitHub.
 source_snapshot/
+
+# Local generated reports
+reports/
+
+# Local deployment secrets
+config/deploy.secrets.json
+*.ftp.txt
+*_ftp.txt
+hostinger_ftp.txt
 
 # OS / editor noise
 .DS_Store
@@ -12,3 +21,4 @@ build/
 .vercel/
 .cache/
 tmp/
+

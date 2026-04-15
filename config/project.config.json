@@ -1,0 +1,43 @@
+﻿{
+    "projectKey":  "slowdrag-site",
+    "projectName":  "Slowdrag Site",
+    "projectType":  "static-site",
+    "description":  "GitHub-first static website workspace and deployment track for Slowdrag.",
+    "owner":  "TMC",
+    "paths":  {
+                  "root":  "vs_code/projects/slowdrag-site",
+                  "site":  "vs_code/projects/slowdrag-site/site",
+                  "docs":  "vs_code/projects/slowdrag-site/docs",
+                  "config":  "vs_code/projects/slowdrag-site/config",
+                  "reports":  "vs_code/projects/slowdrag-site/reports",
+                  "sourceSnapshot":  "vs_code/projects/slowdrag-site/source_snapshot"
+              },
+    "protocols":  {
+                      "workspaceTodo":  "vs_code/docs/tmc-default-project-todo.md",
+                      "staticSiteProtocol":  "vs_code/docs/static-site-deployment-protocol.md",
+                      "loggingRequired":  true,
+                      "sourceSyncMode":  "snapshot-and-report",
+                      "sourceSyncReviewRequired":  true,
+                      "deploySourceOfTruth":  "GitHub-tracked site folder",
+                      "autoReadSourceUpdates":  true,
+                      "autoDeployApprovedSiteOnly":  true
+                  },
+    "source":  {
+                   "folder":  "C:\\Users\\tenet\\OneDrive - Tenet Mediaverse\\Tenet Mediaverse\\SlowDrag Studios\\Slowdrag website buillding",
+                   "snapshotMode":  "reviewed-one-way",
+                   "autoReadEnabled":  true,
+                   "autoDeployEnabled":  false
+               },
+    "deployment":  {
+                       "provider":  "hostinger-ftp",
+                       "primaryDomain":  "slowdragstudio.com",
+                       "publicUrl":  "https://slowdragstudio.com/",
+                       "repoUrl":  "https://github.com/tmediaverse/slowdrag-site",
+                       "host":  "ftp.slowdragstudio.com",
+                       "port":  21,
+                       "username":  "u206199465.slowdrag",
+                       "remoteRoot":  "/",
+                       "passwordEnvVar":  "TMC_SLOWDRAG_SITE_HOSTINGER_FTP_PASSWORD"
+                   },
+    "updatedAt":  "2026-04-15T16:12:42.9415835+05:30"
+}
