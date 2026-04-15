@@ -1,0 +1,14 @@
+# Local source archives stay in the workspace, not in GitHub.
+source_snapshot/
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Future local-only working areas
+dist/
+build/
+.vercel/
+.cache/
+tmp/
