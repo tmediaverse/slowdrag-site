@@ -14,6 +14,12 @@ Snapshot imported on `2026-04-15` from:
 
 The raw creative source is too large for a normal GitHub website repo. The GitHub repo should contain the deployable site and lightweight reference material, while the full creative archive remains in the local workspace snapshot.
 
+## Current GitHub Baseline
+
+- The active deployable baseline is sourced from `slowdragv1.html`.
+- Only the assets required by that `v1` prototype are promoted into `site/`.
+- The full snapshot remains local for reference and future controlled syncs.
+
 ## Largest Files Observed
 
 - `Effects\\Light Artifacts.mov` about `647 MB`

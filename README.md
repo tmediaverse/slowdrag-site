@@ -10,9 +10,9 @@ This repository is the GitHub-first working home for the Slowdrag website inside
 
 ## Current Baseline
 
-- `site/index.html` is sourced from the current `slowdragv2.html` prototype.
-- `site/Logo and font/` contains the lightweight assets required by the current baseline.
-- `docs/reference/` stores the key source notes and the older `slowdragv1` prototype for reference.
+- `site/index.html` is sourced from the approved `slowdragv1.html` prototype.
+- `site/` contains the exact asset subset required by the current `v1` website baseline.
+- `docs/reference/` stores the key source notes and the alternate prototype files for reference.
 - `source_snapshot/` contains dated local snapshots of the live creative source and is intentionally ignored by Git.
 
 ## Structure
