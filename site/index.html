@@ -3,25 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Slowdrag Studio</title>
-    <meta name="title" content="Slowdrag Studio" />
-    <meta
-      name="description"
-      content="Slowdrag Studio creates films, images, and design systems for brands, artists, institutions, and movements."
-    />
-    <meta property="og:title" content="Slowdrag Studio" />
-    <meta
-      property="og:description"
-      content="Slowdrag Studio creates films, images, and design systems for brands, artists, institutions, and movements."
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Slowdrag Studio" />
-    <meta property="og:url" content="https://slowdragstudio.com/" />
-    <meta name="twitter:title" content="Slowdrag Studio" />
-    <meta
-      name="twitter:description"
-      content="Slowdrag Studio creates films, images, and design systems for brands, artists, institutions, and movements."
-    />
+    <title>Slow Drag Studios - Pulse Archive v1</title>
     <script>
       if ("scrollRestoration" in history) {
         history.scrollRestoration = "manual";
@@ -930,6 +912,9 @@
         display: grid;
         gap: 0.8rem;
         margin-top: clamp(2rem, 5vw, 4rem);
+        width: min(100%, 82rem);
+        margin-inline: auto;
+        justify-items: center;
       }
 
       .principle,
@@ -969,9 +954,7 @@
       .principle--intro {
         grid-template-columns: 1fr;
         padding: clamp(1.15rem, 2vw, 1.55rem);
-        background:
-          linear-gradient(90deg, rgba(0, 216, 255, 0.08), rgba(255, 47, 179, 0.08)),
-          rgba(255, 252, 232, 0.34);
+        background: transparent;
       }
 
       .principle--intro::before {
@@ -982,22 +965,61 @@
         gap: clamp(1rem, 1.8vw, 1.4rem);
       }
 
-      .principle--summary p {
-        margin: 0;
-        max-width: 62rem;
-        font-size: clamp(1.12rem, 1.5vw, 1.52rem);
-        line-height: 1.64;
-        color: rgba(27, 0, 63, 0.8);
+      .principle--intro.principle--summary {
+        color: inherit;
+        width: 100%;
       }
 
-      .principle__focus-inline {
-        display: inline;
-        font-family: var(--font-display);
-        font-size: 0.96em;
-        letter-spacing: 0.055em;
-        text-transform: uppercase;
-        color: var(--ink);
-        box-shadow: inset 0 -0.26em 0 rgba(0, 216, 255, 0.16);
+      .principle--intro.principle--summary > div {
+        display: grid;
+        gap: clamp(0.75rem, 1.5vw, 1.15rem);
+        width: 100%;
+      }
+
+      .principle--intro.principle--summary p {
+        margin: 0;
+        max-width: 62rem;
+        font-size: clamp(0.98rem, 1.22vw, 1.22rem);
+        line-height: 1.72;
+        color: inherit;
+      }
+
+      .principle--intro.principle--summary > div > p:first-child {
+        width: min(100%, 34ch);
+        max-width: 34ch;
+        text-align: center;
+        justify-self: center;
+        text-wrap: balance;
+      }
+
+      .principle--intro.principle--summary > div > p:last-child {
+        width: 100%;
+        max-width: none;
+        justify-self: stretch;
+        text-align: center;
+        text-wrap: balance;
+      }
+
+      .principle .principle__focus-inline {
+        display: block;
+        font: inherit;
+        font-size: 1.82em;
+        line-height: 1.18;
+        letter-spacing: inherit;
+        text-transform: none;
+        color: inherit;
+        opacity: 1;
+        filter: none;
+        text-shadow: none;
+        background: none;
+        box-shadow: none;
+      }
+
+      .principle .principle__follow-line {
+        display: block;
+        width: 100%;
+        margin-top: 0.4em;
+        text-align: center;
       }
 
       .principle__number,
@@ -2510,6 +2532,298 @@
         }
       }
 
+      .web-development {
+        position: relative;
+        min-height: auto;
+        padding: clamp(5rem, 9vw, 8rem) 0 clamp(4rem, 8vw, 6rem);
+        background:
+          radial-gradient(circle at 14% 18%, rgba(90, 163, 184, 0.18), transparent 24rem),
+          radial-gradient(circle at 86% 14%, rgba(184, 79, 40, 0.14), transparent 28rem),
+          linear-gradient(180deg, #070604 0%, #0d0906 42%, #050403 100%);
+        color: var(--bone);
+        overflow: clip;
+      }
+
+      .web-development::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        opacity: 0.08;
+        background-image:
+          linear-gradient(rgba(239, 225, 189, 0.08) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(239, 225, 189, 0.06) 1px, transparent 1px);
+        background-size: 100% 6rem, 6rem 100%;
+      }
+
+      .web-development__head,
+      .web-development__stage {
+        position: relative;
+        z-index: 1;
+      }
+
+      .web-development__head {
+        display: grid;
+        gap: 0.8rem;
+        max-width: 70rem;
+        width: min(70rem, calc(100% - 2rem));
+        margin: 0 auto clamp(2rem, 4vw, 3rem);
+      }
+
+      .web-development__head .section-title {
+        max-width: 16ch;
+      }
+
+      .web-development__head p:last-child {
+        margin: 0;
+        max-width: 44rem;
+        color: rgba(239, 225, 189, 0.76);
+        font-size: clamp(1.08rem, 1.24vw, 1.22rem);
+        line-height: 1.62;
+      }
+
+      .web-development__stage {
+        width: min(84rem, calc(100% - 1rem));
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: minmax(0, 1.22fr) minmax(18rem, 0.92fr);
+        grid-template-areas:
+          "hero side-a"
+          "hero side-b"
+          "footer footer";
+        gap: clamp(1rem, 2vw, 1.5rem);
+        padding-inline: 0.25rem;
+      }
+
+      .web-development__stage::before {
+        content: "Web Systems / Launch Surfaces / Responsive Worlds";
+        position: absolute;
+        top: -0.35rem;
+        left: 50%;
+        width: max-content;
+        max-width: none;
+        color: rgba(239, 225, 189, 0.06);
+        font-family: var(--font-display);
+        font-size: clamp(2.4rem, 6vw, 6.5rem);
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        transform: translateX(-50%);
+        pointer-events: none;
+        white-space: nowrap;
+      }
+
+      .web-development__window {
+        --window-offset: 0rem;
+        position: relative;
+        display: grid;
+        gap: 0;
+        min-height: 18rem;
+        padding: clamp(0.8rem, 1.5vw, 1rem);
+        border: 1px solid rgba(239, 225, 189, 0.14);
+        border-radius: 1.35rem;
+        background:
+          linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.015)),
+          rgba(7, 5, 3, 0.84);
+        box-shadow:
+          0 1.6rem 3.8rem rgba(0, 0, 0, 0.28),
+          inset 0 0 0 1px rgba(239, 225, 189, 0.04);
+        backdrop-filter: blur(14px);
+        transform: translateY(var(--window-offset));
+        transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+        isolation: isolate;
+        overflow: hidden;
+      }
+
+      .web-development__window:hover,
+      .web-development__window:focus-within {
+        transform: translateY(calc(var(--window-offset) - 0.35rem));
+        border-color: rgba(239, 225, 189, 0.22);
+        box-shadow:
+          0 1.9rem 4.4rem rgba(0, 0, 0, 0.34),
+          inset 0 0 0 1px rgba(239, 225, 189, 0.08);
+      }
+
+      .web-development__window::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), transparent 18%);
+        opacity: 0.42;
+      }
+
+      .web-development__window--hero {
+        grid-area: hero;
+        --window-offset: 1.2rem;
+      }
+
+      .web-development__window--side-a {
+        grid-area: side-a;
+        --window-offset: 0rem;
+      }
+
+      .web-development__window--side-b {
+        grid-area: side-b;
+        --window-offset: 1.4rem;
+      }
+
+      .web-development__window--footer {
+        grid-area: footer;
+        --window-offset: 0.4rem;
+      }
+
+      .web-development__chrome {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr) auto;
+        align-items: center;
+        gap: 0.8rem;
+        margin-bottom: 0.8rem;
+        font-size: 0.64rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: rgba(239, 225, 189, 0.54);
+      }
+
+      .web-development__dots {
+        display: inline-flex;
+        gap: 0.34rem;
+      }
+
+      .web-development__dots span {
+        width: 0.5rem;
+        height: 0.5rem;
+        border-radius: 50%;
+        background: rgba(239, 225, 189, 0.46);
+      }
+
+      .web-development__address {
+        display: inline-flex;
+        align-items: center;
+        min-height: 1.8rem;
+        padding: 0.3rem 0.75rem;
+        border: 1px solid rgba(239, 225, 189, 0.12);
+        border-radius: 999px;
+        background: rgba(239, 225, 189, 0.04);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .web-development__status {
+        color: rgba(239, 225, 189, 0.34);
+      }
+
+      .web-development__screen {
+        position: relative;
+        min-height: 15rem;
+        border-radius: 0.95rem;
+        overflow: hidden;
+        background: rgba(239, 225, 189, 0.04);
+      }
+
+      .web-development__window--hero .web-development__screen {
+        min-height: clamp(24rem, 42vw, 38rem);
+      }
+
+      .web-development__window--side-a .web-development__screen,
+      .web-development__window--side-b .web-development__screen {
+        min-height: clamp(16rem, 22vw, 20rem);
+      }
+
+      .web-development__window--footer .web-development__screen {
+        min-height: clamp(18rem, 30vw, 24rem);
+      }
+
+      .web-development__screen img,
+      .web-development__screen video {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+      }
+
+      .web-development__screen video {
+        background: #080706;
+      }
+
+      .web-development__caption {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 1rem;
+        margin-top: 0.9rem;
+        color: rgba(239, 225, 189, 0.76);
+      }
+
+      .web-development__caption strong {
+        font-family: var(--font-display);
+        font-size: clamp(0.88rem, 1vw, 1rem);
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--bone);
+      }
+
+      .web-development__caption span {
+        font-size: clamp(0.88rem, 1vw, 0.98rem);
+        line-height: 1.5;
+        color: rgba(239, 225, 189, 0.62);
+      }
+
+      @media (max-width: 980px) {
+        .web-development__stage {
+          grid-template-columns: 1fr;
+          grid-template-areas:
+            "hero"
+            "side-a"
+            "side-b"
+            "footer";
+        }
+
+        .web-development__stage::before {
+          font-size: clamp(2rem, 8vw, 4.2rem);
+          top: -0.1rem;
+        }
+
+        .web-development__window,
+        .web-development__window--hero,
+        .web-development__window--side-a,
+        .web-development__window--side-b,
+        .web-development__window--footer {
+          --window-offset: 0rem;
+        }
+      }
+
+      @media (max-width: 680px) {
+        .web-development__head {
+          width: min(100%, calc(100% - 1rem));
+        }
+
+        .web-development__stage {
+          width: calc(100% - 0.35rem);
+        }
+
+        .web-development__chrome {
+          grid-template-columns: auto 1fr;
+          gap: 0.65rem;
+        }
+
+        .web-development__status {
+          display: none;
+        }
+
+        .web-development__caption {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .web-development__window {
+          transform: none;
+          transition: none;
+        }
+      }
+
       .method {
         display: grid;
         align-content: center;
@@ -2600,19 +2914,193 @@
 
       .contact-card {
         padding: 1.1rem;
-        border: 1px solid rgba(255, 252, 232, 0.32);
+        color: var(--ink);
+        border: 1px solid rgba(19, 17, 13, 0.18);
         border-radius: 1.4rem;
-        background:
-          linear-gradient(135deg, rgba(255, 47, 179, 0.22), rgba(0, 216, 255, 0.18)),
-          rgba(255, 252, 232, 0.08);
+        background: linear-gradient(145deg, rgba(255, 243, 207, 0.98), rgba(239, 225, 189, 0.96));
       }
 
       .contact-card p {
         margin: 0 0 1rem;
+        color: var(--ink);
         font-size: clamp(1.06rem, 1.12vw, 1.18rem);
         line-height: 1.58;
         letter-spacing: 0.035em;
         word-spacing: 0.1em;
+      }
+
+      .contact-window {
+        position: relative;
+        overflow: hidden;
+        display: grid;
+        gap: 1rem;
+        padding: clamp(1rem, 2vw, 1.35rem);
+        backdrop-filter: blur(16px);
+        box-shadow: 0 1.5rem 3.6rem rgba(7, 0, 22, 0.24);
+      }
+
+      .contact-window::before {
+        content: none;
+        position: absolute;
+        inset: 0 auto auto 0;
+        width: 100%;
+        height: 0.18rem;
+        background: rgba(19, 17, 13, 0.12);
+        opacity: 0.88;
+      }
+
+      .contact-window__chrome {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr) auto;
+        align-items: center;
+        gap: 0.9rem;
+        padding-bottom: 0.95rem;
+        border-bottom: 1px solid rgba(19, 17, 13, 0.14);
+      }
+
+      .contact-window__dots {
+        display: inline-flex;
+        gap: 0.42rem;
+      }
+
+      .contact-window__dots span {
+        width: 0.68rem;
+        height: 0.68rem;
+        border-radius: 999px;
+        background: rgba(19, 17, 13, 0.24);
+        box-shadow: 0 0 0 1px rgba(19, 17, 13, 0.08);
+      }
+
+      .contact-window__dots span:nth-child(2) {
+        background: rgba(19, 17, 13, 0.24);
+      }
+
+      .contact-window__dots span:nth-child(3) {
+        background: rgba(19, 17, 13, 0.24);
+      }
+
+      .contact-window__title {
+        font-family: var(--font-display);
+        font-size: clamp(0.98rem, 1vw, 1.08rem);
+        letter-spacing: 0.12em;
+        word-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .contact-window__status {
+        justify-self: end;
+        color: rgba(19, 17, 13, 0.5);
+        font-size: 0.72rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+
+      .contact-card .contact-window__intro {
+        margin: 0;
+      }
+
+      .contact-window__form {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .contact-window__grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.9rem;
+      }
+
+      .contact-window__field {
+        display: grid;
+        gap: 0.45rem;
+      }
+
+      .contact-window__field--full {
+        grid-column: 1 / -1;
+      }
+
+      .contact-window__field span {
+        color: rgba(19, 17, 13, 0.58);
+        font-size: 0.76rem;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .contact-window__field input,
+      .contact-window__field select,
+      .contact-window__field textarea {
+        width: 100%;
+        border: 1px solid rgba(19, 17, 13, 0.14);
+        border-radius: 1rem;
+        background: rgba(255, 245, 215, 0.72);
+        color: var(--ink);
+        padding: 0.9rem 1rem;
+        font: inherit;
+        letter-spacing: 0.035em;
+        word-spacing: 0.1em;
+        outline: none;
+        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.24);
+        transition:
+          border-color 180ms ease,
+          background-color 180ms ease,
+          box-shadow 180ms ease,
+          transform 180ms ease;
+      }
+
+      .contact-window__field textarea {
+        min-height: 9rem;
+        resize: vertical;
+      }
+
+      .contact-window__field select option {
+        background: var(--bone);
+        color: var(--ink);
+      }
+
+      .contact-window__field input::placeholder,
+      .contact-window__field textarea::placeholder {
+        color: rgba(19, 17, 13, 0.42);
+      }
+
+      .contact-window__field input:focus,
+      .contact-window__field select:focus,
+      .contact-window__field textarea:focus {
+        border-color: rgba(19, 17, 13, 0.22);
+        background: rgba(255, 245, 215, 0.94);
+        box-shadow: 0 0 0 1px rgba(19, 17, 13, 0.08), 0 0 1.4rem rgba(19, 17, 13, 0.04);
+        transform: translateY(-1px);
+      }
+
+      .contact-window__actions {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 1rem;
+      }
+
+      .contact-window__action-set {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.8rem;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+
+      .contact-card .contact-window__hint {
+        margin: 0;
+        min-height: 1.25rem;
+        color: rgba(19, 17, 13, 0.56);
+        font-size: 0.84rem;
+        line-height: 1.45;
+        letter-spacing: 0.05em;
+      }
+
+      .contact-card .contact-window__hint[data-state="success"] {
+        color: rgba(140, 255, 0, 0.88);
+      }
+
+      .contact-card .contact-window__hint[data-state="fallback"] {
+        color: rgba(19, 17, 13, 0.7);
       }
 
       [data-reveal] {
@@ -2758,6 +3246,10 @@
           --reel-stage-height: min(72vh, 44rem);
           --reel-arrow-width: clamp(4.8rem, 9vw, 6.8rem);
         }
+
+        .contact-window__grid {
+          grid-template-columns: 1fr;
+        }
       }
 
       @media (max-width: 680px) {
@@ -2768,6 +3260,25 @@
         .site-header {
           grid-template-columns: 1fr;
           gap: 0.75rem;
+        }
+
+        .contact-window__chrome {
+          grid-template-columns: auto 1fr;
+        }
+
+        .contact-window__status {
+          grid-column: 1 / -1;
+          justify-self: start;
+        }
+
+        .contact-window__actions {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        .contact-window__action-set {
+          width: 100%;
+          justify-content: flex-start;
         }
 
         .nav {
@@ -3168,6 +3679,11 @@
         background: rgba(242, 230, 196, 0.06);
       }
 
+      .principle--intro,
+      :root[data-theme="dark"] .principle--intro {
+        background: transparent;
+      }
+
       .principle::before {
         background: linear-gradient(90deg, rgba(90, 163, 184, 0.18), transparent);
       }
@@ -3322,13 +3838,68 @@
       }
 
       .contact-card {
-        border-color: rgba(239, 225, 189, 0.22);
-        background: rgba(239, 225, 189, 0.06);
+        border-color: rgba(19, 17, 13, 0.18);
+        background: linear-gradient(145deg, rgba(255, 243, 207, 0.98), rgba(239, 225, 189, 0.96));
       }
 
       :root[data-theme="dark"] .contact-card {
         border-color: rgba(242, 230, 196, 0.22);
-        background: rgba(242, 230, 196, 0.06);
+        background: linear-gradient(145deg, rgba(18, 15, 12, 0.96), rgba(9, 8, 6, 0.94));
+      }
+
+      :root[data-theme="dark"] .contact-card p {
+        color: var(--ink);
+      }
+
+      :root[data-theme="dark"] .contact-window__chrome {
+        border-bottom-color: rgba(242, 230, 196, 0.18);
+      }
+
+      :root[data-theme="dark"] .contact-window__dots span {
+        background: rgba(242, 230, 196, 0.28);
+        box-shadow: 0 0 0 1px rgba(242, 230, 196, 0.08);
+      }
+
+      :root[data-theme="dark"] .contact-window__dots span:nth-child(2),
+      :root[data-theme="dark"] .contact-window__dots span:nth-child(3) {
+        background: rgba(242, 230, 196, 0.28);
+      }
+
+      :root[data-theme="dark"] .contact-window__status,
+      :root[data-theme="dark"] .contact-window__field span,
+      :root[data-theme="dark"] .contact-card .contact-window__hint {
+        color: rgba(242, 230, 196, 0.62);
+      }
+
+      :root[data-theme="dark"] .contact-window__field input,
+      :root[data-theme="dark"] .contact-window__field select,
+      :root[data-theme="dark"] .contact-window__field textarea {
+        border-color: rgba(242, 230, 196, 0.14);
+        background: rgba(242, 230, 196, 0.07);
+        color: var(--ink);
+        box-shadow: inset 0 0 0 1px rgba(242, 230, 196, 0.04);
+      }
+
+      :root[data-theme="dark"] .contact-window__field select option {
+        background: #090806;
+        color: var(--ink);
+      }
+
+      :root[data-theme="dark"] .contact-window__field input::placeholder,
+      :root[data-theme="dark"] .contact-window__field textarea::placeholder {
+        color: rgba(242, 230, 196, 0.38);
+      }
+
+      :root[data-theme="dark"] .contact-window__field input:focus,
+      :root[data-theme="dark"] .contact-window__field select:focus,
+      :root[data-theme="dark"] .contact-window__field textarea:focus {
+        border-color: rgba(242, 230, 196, 0.24);
+        background: rgba(242, 230, 196, 0.11);
+        box-shadow: 0 0 0 1px rgba(242, 230, 196, 0.08), 0 0 1.4rem rgba(242, 230, 196, 0.04);
+      }
+
+      :root[data-theme="dark"] .contact-card .contact-window__hint[data-state="fallback"] {
+        color: rgba(242, 230, 196, 0.78);
       }
 
       @media (max-width: 980px) {
@@ -3395,6 +3966,8 @@
         <a href="#practice">Practice</a>
         <a href="#work">Work</a>
         <a href="#archive">Archive</a>
+        <a href="./about-us.html">About Us</a>
+        <a href="./client-work.html">Client Work</a>
         <a href="#begin">Begin</a>
       </nav>
       <div class="header-actions">
@@ -3486,7 +4059,7 @@
           <article class="principle principle--intro principle--summary" data-reveal>
             <div>
               <p>Slow Drag is a way of working. Every project begins with conversation, not assumption.</p>
-              <p><span class="principle__focus-inline">Film, branding, graphic design, spatial thinking, writing, and visual strategy</span> are not separated. They contaminate each other because meaning lives in the overlap.</p>
+              <p><span class="principle__focus-inline">Film, branding, graphic design, spatial thinking, writing, web-development and visual strategy.</span><span class="principle__follow-line">Contaminate each other because meaning lives in the overlap.</span></p>
             </div>
           </article>
         </div>
@@ -3593,11 +4166,11 @@
             <span class="archive-card__breach" aria-hidden="true">Documentary</span>
           </button>
 
-          <button class="archive-card archive-card--southeast" type="button" aria-label="Art Direction">
+          <button class="archive-card archive-card--southeast" type="button" aria-label="Direction">
             <span class="archive-card__surface">
               <video autoplay muted loop playsinline preload="metadata"><source src="./Video%20GIFs/File%2024.mp4" type="video/mp4" /></video>
               <span class="archive-card__base">
-                <strong>Art Direction</strong>
+                <strong>Direction</strong>
                 <span>Concept / Set / Release</span>
               </span>
               <span class="archive-card__overlay">
@@ -3605,7 +4178,7 @@
                 <p>Conceptual image systems that give a project a visual spine before the first frame lands.</p>
               </span>
             </span>
-            <span class="archive-card__breach" aria-hidden="true">Art Direction</span>
+            <span class="archive-card__breach" aria-hidden="true">Direction</span>
           </button>
         </div>
       </section>
@@ -3640,7 +4213,7 @@
 
                   <figure class="design-volume__asset" style="--asset-w: 30rem; --asset-h: 21rem; --lift: -10vh; --tilt: -2deg; --wave: 1.25; --amplitude: 22;">
                     <video autoplay muted loop playsinline preload="metadata">
-                      <source src="./Graphic%20Design/TPD_brandbook%20animation.mp4" type="video/mp4" />
+                      <source src="./TPD_brandbook%20animation.mp4" type="video/mp4" />
                     </video>
                   </figure>
 
@@ -3694,6 +4267,80 @@
         </div>
       </section>
 
+      <section class="section web-development" id="web-development">
+        <div class="web-development__head" data-reveal>
+          <p class="eyebrow">Web-development</p>
+          <h2 class="section-title">Websites that keep the brand language alive on screen.</h2>
+          <p>
+            Slow Drag Studio translates identity, writing, motion, and visual strategy into client websites that feel authored from the first scroll to the final click.
+          </p>
+        </div>
+
+        <div class="web-development__stage">
+          <article class="web-development__window web-development__window--hero" data-reveal>
+            <div class="web-development__chrome" aria-hidden="true">
+              <span class="web-development__dots"><span></span><span></span><span></span></span>
+              <span class="web-development__address">story-led launch surface / responsive brand world</span>
+              <span class="web-development__status">live build</span>
+            </div>
+            <div class="web-development__screen">
+              <img src="./Graphic%20Design/_page_exports/formme-page-02.png" alt="Client website launch visual" loading="lazy" />
+            </div>
+            <div class="web-development__caption">
+              <strong>Launch Pages</strong>
+              <span>Landing systems where the brand world, motion, and call to action live in one composed frame.</span>
+            </div>
+          </article>
+
+          <article class="web-development__window web-development__window--side-a" data-reveal>
+            <div class="web-development__chrome" aria-hidden="true">
+              <span class="web-development__dots"><span></span><span></span><span></span></span>
+              <span class="web-development__address">editorial commerce / identity translated online</span>
+              <span class="web-development__status">desktop</span>
+            </div>
+            <div class="web-development__screen">
+              <img src="./Graphic%20Design/_page_exports/recovery-page-06.png" alt="Client website concept screen" loading="lazy" />
+            </div>
+            <div class="web-development__caption">
+              <strong>Brand Worlds</strong>
+              <span>Interfaces that keep the emotion of the campaign intact instead of flattening it into utility.</span>
+            </div>
+          </article>
+
+          <article class="web-development__window web-development__window--side-b" data-reveal>
+            <div class="web-development__chrome" aria-hidden="true">
+              <span class="web-development__dots"><span></span><span></span><span></span></span>
+              <span class="web-development__address">conversion-led structure / responsive storytelling</span>
+              <span class="web-development__status">system</span>
+            </div>
+            <div class="web-development__screen">
+              <img src="./Graphic%20Design/_page_exports/recovery-page-10.png" alt="Client website system screen" loading="lazy" />
+            </div>
+            <div class="web-development__caption">
+              <strong>Responsive Systems</strong>
+              <span>Pages built to carry story, clarity, and momentum without losing the brand&apos;s visual discipline.</span>
+            </div>
+          </article>
+
+          <article class="web-development__window web-development__window--footer" data-reveal>
+            <div class="web-development__chrome" aria-hidden="true">
+              <span class="web-development__dots"><span></span><span></span><span></span></span>
+              <span class="web-development__address">motion layer / interface energy / live interaction</span>
+              <span class="web-development__status">motion</span>
+            </div>
+            <div class="web-development__screen">
+              <video autoplay muted loop playsinline preload="metadata">
+                <source src="./Graphic%20Design/Videos/Pulse%20Energy.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="web-development__caption">
+              <strong>Motion Surfaces</strong>
+              <span>Digital moments where movement is not decoration but part of how the interface speaks.</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
       <section class="section method">
         <div class="method__grid">
           <div data-reveal>
@@ -3723,9 +4370,55 @@
             <h2 class="section-title">What must stay?</h2>
             <p>For brands, artists, institutions, and movements that need image worlds built with care, emotion, and risk.</p>
           </div>
-          <div class="contact-card" data-reveal>
-            <p>Start with a conversation. Bring a brief, a memory, a problem, a fragment, or a feeling that will not leave.</p>
-            <button class="button" type="button">Begin a conversation</button>
+          <div class="contact-card contact-window" data-reveal>
+            <div class="contact-window__chrome" aria-hidden="true">
+              <div class="contact-window__dots">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="contact-window__title">conversation.slowdrag</div>
+              <div class="contact-window__status">live draft</div>
+            </div>
+            <p class="contact-window__intro">Start with a conversation. Bring a brief, a memory, a problem, a fragment, or a feeling that will not leave.</p>
+            <form class="contact-window__form" id="contactWindowForm">
+              <div class="contact-window__grid">
+                <label class="contact-window__field">
+                  <span>Name</span>
+                  <input id="contactName" name="name" type="text" placeholder="Who is reaching out?" />
+                </label>
+                <label class="contact-window__field">
+                  <span>Email</span>
+                  <input id="contactEmail" name="email" type="email" placeholder="Where should the reply land?" />
+                </label>
+                <label class="contact-window__field">
+                  <span>Need</span>
+                  <select id="contactNeed" name="need">
+                    <option value="">Choose a starting point</option>
+                    <option value="Film direction / production">Film direction / production</option>
+                    <option value="Brand identity / design system">Brand identity / design system</option>
+                    <option value="Website / digital surface">Website / digital surface</option>
+                    <option value="Campaign / launch world">Campaign / launch world</option>
+                    <option value="Something hybrid">Something hybrid</option>
+                  </select>
+                </label>
+                <label class="contact-window__field">
+                  <span>Timeline</span>
+                  <input id="contactTimeline" name="timeline" type="text" placeholder="When should this move?" />
+                </label>
+                <label class="contact-window__field contact-window__field--full">
+                  <span>What needs to stay?</span>
+                  <textarea id="contactBrief" name="brief" placeholder="Tell Slow Drag what the project is trying to hold, resist, shift, or remember."></textarea>
+                </label>
+              </div>
+              <div class="contact-window__actions">
+                <p class="contact-window__hint" id="contactWindowStatus" aria-live="polite">Shape the inquiry here and the window will turn it into a clean note you can send anywhere.</p>
+                <div class="contact-window__action-set">
+                  <button class="button button--quiet" type="reset">Clear</button>
+                  <button class="button" id="contactWindowCopy" type="button">Begin a conversation</button>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </section>
@@ -3738,6 +4431,9 @@
       const listeningPad = document.querySelector(".listening-pad");
       const listenTitle = document.getElementById("listenTitle");
       const listenCopy = document.getElementById("listenCopy");
+      const contactWindowForm = document.getElementById("contactWindowForm");
+      const contactWindowCopy = document.getElementById("contactWindowCopy");
+      const contactWindowStatus = document.getElementById("contactWindowStatus");
       const themeToggle = document.querySelector(".theme-toggle");
       const reelFrame = document.querySelector(".reel__frame");
       const reelWorld = document.querySelector(".reel__world");
@@ -3797,6 +4493,7 @@
       let reelRotation = 0;
       let reelTurnToken = 0;
       let reelIsTurning = false;
+      const defaultContactWindowStatus = contactWindowStatus?.textContent || "";
 
       function clamp(value, min, max) {
         return Math.min(Math.max(value, min), max);
@@ -3808,6 +4505,64 @@
         }
 
         return ((index % length) + length) % length;
+      }
+
+      function setContactWindowStatus(message = defaultContactWindowStatus, state = "") {
+        if (!contactWindowStatus) {
+          return;
+        }
+
+        contactWindowStatus.textContent = message || defaultContactWindowStatus;
+
+        if (state) {
+          contactWindowStatus.dataset.state = state;
+          return;
+        }
+
+        delete contactWindowStatus.dataset.state;
+      }
+
+      function buildContactWindowNote() {
+        if (!contactWindowForm) {
+          return "";
+        }
+
+        const formData = new FormData(contactWindowForm);
+        const name = formData.get("name")?.toString().trim() || "Not provided";
+        const email = formData.get("email")?.toString().trim() || "Not provided";
+        const need = formData.get("need")?.toString().trim() || "Not provided";
+        const timeline = formData.get("timeline")?.toString().trim() || "Not provided";
+        const brief = formData.get("brief")?.toString().trim() || "Not provided";
+
+        return [
+          "Slow Drag inquiry",
+          `Name: ${name}`,
+          `Email: ${email}`,
+          `Need: ${need}`,
+          `Timeline: ${timeline}`,
+          "",
+          "What needs to stay?",
+          brief,
+        ].join("\n");
+      }
+
+      async function copyContactWindowNote() {
+        const note = buildContactWindowNote();
+
+        if (!note) {
+          return;
+        }
+
+        try {
+          if (!navigator.clipboard?.writeText) {
+            throw new Error("Clipboard unavailable");
+          }
+
+          await navigator.clipboard.writeText(note);
+          setContactWindowStatus("Conversation note copied. Drop it into mail, WhatsApp, or the inbox you use for leads.", "success");
+        } catch {
+          setContactWindowStatus("Clipboard access is unavailable here. The note is still structured in the window and ready to send manually.", "fallback");
+        }
       }
 
       function removeLocationHash() {
@@ -4489,6 +5244,26 @@
         });
         listeningPad.addEventListener("pointerleave", () => {
           holding = false;
+        });
+      }
+
+      if (contactWindowForm) {
+        contactWindowForm.addEventListener("input", () => {
+          if (contactWindowStatus?.dataset.state) {
+            setContactWindowStatus();
+          }
+        });
+
+        contactWindowForm.addEventListener("reset", () => {
+          window.setTimeout(() => {
+            setContactWindowStatus();
+          }, 0);
+        });
+      }
+
+      if (contactWindowCopy) {
+        contactWindowCopy.addEventListener("click", () => {
+          copyContactWindowNote();
         });
       }
 
