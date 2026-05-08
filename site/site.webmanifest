@@ -1,0 +1,18 @@
+{
+  "name": "Slow Drag Studio",
+  "short_name": "Slow Drag",
+  "description": "Films, images, design systems, and authored brand worlds.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#fff23d",
+  "theme_color": "#1b003f",
+  "icons": [
+    {
+      "src": "/Logo%20and%20font/logo.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /conversations/
+
+Sitemap: https://slowdragstudio.com/sitemap.xml

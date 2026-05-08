@@ -23,7 +23,7 @@
                       "autoDeployApprovedSiteOnly":  true
                   },
     "source":  {
-                   "folder":  "C:\\Users\\tenet\\OneDrive - Tenet Mediaverse\\Tenet Mediaverse\\SlowDrag Studios\\Slowdrag website buillding",
+                   "folder":  "C:\\Users\\dhruv\\OneDrive - Tenet Mediaverse\\Tenet Mediaverse\\SlowDrag Studios\\Slowdrag website buillding",
                    "snapshotMode":  "reviewed-one-way",
                    "autoReadEnabled":  true,
                    "autoDeployEnabled":  false

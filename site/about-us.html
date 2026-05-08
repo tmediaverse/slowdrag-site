@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About Slow Drag Studio | Film, Design, Motion, Digital Surfaces</title>
+    <meta
+      name="description"
+      content="Learn how Slow Drag Studio moves across film, brand systems, graphic design, writing, motion, and digital surfaces."
+    />
+    <link rel="canonical" href="https://slowdragstudio.com/about-us.html" />
+    <link rel="icon" type="image/png" href="/Logo%20and%20font/logo.png" />
+    <link rel="apple-touch-icon" href="/Logo%20and%20font/logo.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta property="og:site_name" content="Slow Drag Studio" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="About Slow Drag Studio" />
+    <meta
+      property="og:description"
+      content="A studio for film, brand systems, graphic design, writing, motion, and digital surfaces built with pulse."
+    />
+    <meta property="og:url" content="https://slowdragstudio.com/about-us.html" />
+    <meta property="og:image" content="https://slowdragstudio.com/Logo%20and%20font/fulllogo.png" />
+    <meta property="og:image:alt" content="Slow Drag Studio wordmark" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="About Slow Drag Studio" />
+    <meta
+      name="twitter:description"
+      content="A studio for film, brand systems, graphic design, writing, motion, and digital surfaces built with pulse."
+    />
+    <meta name="twitter:image" content="https://slowdragstudio.com/Logo%20and%20font/fulllogo.png" />
+    <style>
+      @font-face {
+        font-family: "OffBit Body";
+        src: url("./Logo%20and%20font/OffBit-Regular.ttf") format("truetype");
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "OffBit 101";
+        src: url("./Logo%20and%20font/OffBit-101.ttf") format("truetype");
+        font-display: swap;
+      }
+
+      :root {
+        --bg: #f5ead2;
+        --panel: rgba(255, 248, 224, 0.72);
+        --line: rgba(19, 17, 13, 0.16);
+        --text: #13110d;
+        --muted: rgba(19, 17, 13, 0.7);
+        --pink: #ff2fb3;
+        --blue: #00d8ff;
+        --lime: #8cff00;
+        --gold: #ff8a00;
+        --shadow: rgba(45, 28, 12, 0.14);
+        --font-display: "OffBit 101", "OffBit Body", monospace;
+        --font-body: "OffBit Body", "Courier New", monospace;
+      }
+
+      :root[data-theme="dark"] {
+        --bg: #090806;
+        --panel: rgba(12, 15, 22, 0.76);
+        --line: rgba(242, 230, 196, 0.16);
+        --text: #f2e6c4;
+        --muted: rgba(242, 230, 196, 0.7);
+        --shadow: rgba(0, 0, 0, 0.32);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        background: var(--bg);
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        overflow-x: hidden;
+        color: var(--text);
+        font-family: var(--font-body);
+        background:
+          radial-gradient(circle at 12% 18%, rgba(255, 47, 179, 0.12), transparent 22rem),
+          radial-gradient(circle at 88% 12%, rgba(0, 216, 255, 0.18), transparent 20rem),
+          radial-gradient(circle at 78% 78%, rgba(140, 255, 0, 0.1), transparent 18rem),
+          linear-gradient(180deg, var(--bg) 0%, color-mix(in srgb, var(--bg) 82%, #b89360 18%) 100%);
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        pointer-events: none;
+        opacity: 0.28;
+        background-image:
+          linear-gradient(rgba(60, 36, 13, 0.08) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(60, 36, 13, 0.05) 1px, transparent 1px);
+        background-size: 100% 1rem, 1rem 100%;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      button {
+        color: inherit;
+        font: inherit;
+      }
+
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem clamp(1rem, 3vw, 2rem);
+        border-bottom: 1px solid var(--line);
+        background: color-mix(in srgb, var(--panel) 92%, transparent);
+        backdrop-filter: blur(18px);
+      }
+
+      .topbar__brand img {
+        width: clamp(7rem, 14vw, 11rem);
+      }
+
+      .topbar__nav {
+        display: flex;
+        justify-content: center;
+        gap: clamp(0.75rem, 2vw, 1.8rem);
+        flex-wrap: wrap;
+        font-family: var(--font-display);
+        font-size: 0.76rem;
+        letter-spacing: 0.24em;
+        text-transform: uppercase;
+      }
+
+      .topbar__nav a {
+        opacity: 0.74;
+      }
+
+      .topbar__nav a:hover,
+      .topbar__nav a:focus-visible,
+      .topbar__nav a[aria-current="page"] {
+        opacity: 1;
+      }
+
+      .theme-toggle {
+        min-height: 2.5rem;
+        padding: 0.5rem 0.95rem;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: transparent;
+        font-family: var(--font-display);
+        font-size: 0.74rem;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+      }
+
+      .shell {
+        width: min(104rem, calc(100% - 2rem));
+        margin: 0 auto;
+        padding: clamp(2rem, 5vw, 4rem) 0 clamp(3rem, 6vw, 5rem);
+      }
+
+      .hero {
+        display: grid;
+        gap: 1.5rem;
+        align-items: end;
+        padding: clamp(1rem, 2vw, 1.5rem) 0 clamp(2rem, 5vw, 4rem);
+      }
+
+      .eyebrow,
+      .button {
+        font-family: var(--font-display);
+        font-size: 0.8rem;
+        letter-spacing: 0.24em;
+        text-transform: uppercase;
+      }
+
+      .eyebrow {
+        color: var(--muted);
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin: 0;
+      }
+
+      .hero h1 {
+        max-width: 12ch;
+        font-family: var(--font-display);
+        font-size: clamp(3.2rem, 9vw, 7.6rem);
+        line-height: 0.94;
+      }
+
+      .hero p {
+        max-width: 52rem;
+        color: var(--muted);
+        font-size: clamp(1.08rem, 1.45vw, 1.3rem);
+        line-height: 1.68;
+      }
+
+      .statement,
+      .method,
+      .cta {
+        border: 1px solid var(--line);
+        border-radius: 2rem;
+        background: var(--panel);
+        box-shadow: 0 1.1rem 2.5rem var(--shadow);
+      }
+
+      .statement {
+        display: grid;
+        grid-template-columns: minmax(0, 1.35fr) minmax(16rem, 0.95fr);
+        gap: 1.5rem;
+        padding: clamp(1.5rem, 3vw, 2.5rem);
+      }
+
+      .statement__copy {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .statement__copy h2 {
+        font-family: var(--font-display);
+        font-size: clamp(1.7rem, 3vw, 3rem);
+        line-height: 1.02;
+      }
+
+      .statement__copy p,
+      .method__intro p,
+      .cta p {
+        color: var(--muted);
+        line-height: 1.68;
+        font-size: clamp(1rem, 1.2vw, 1.15rem);
+      }
+
+      .signal-list {
+        display: grid;
+        gap: 0.9rem;
+      }
+
+      .signal {
+        padding: 1rem 1rem 1rem 1.15rem;
+        border-left: 3px solid currentColor;
+        background: rgba(255, 255, 255, 0.18);
+      }
+
+      .signal:nth-child(1) {
+        color: var(--pink);
+      }
+
+      .signal:nth-child(2) {
+        color: var(--blue);
+      }
+
+      .signal:nth-child(3) {
+        color: var(--lime);
+      }
+
+      .signal strong {
+        display: block;
+        margin-bottom: 0.35rem;
+        font-family: var(--font-display);
+        font-size: 0.82rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+
+      .signal span {
+        display: block;
+        color: var(--text);
+        font-size: 0.98rem;
+        line-height: 1.55;
+      }
+
+      .method {
+        margin-top: clamp(1.5rem, 4vw, 2.5rem);
+        padding: clamp(1.5rem, 3vw, 2.5rem);
+      }
+
+      .method__intro {
+        display: grid;
+        gap: 0.9rem;
+        max-width: 48rem;
+      }
+
+      .method__grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1rem;
+        margin-top: 1.5rem;
+      }
+
+      .method-card {
+        display: grid;
+        gap: 0.9rem;
+        padding: 1.2rem;
+        border: 1px solid var(--line);
+        border-radius: 1.4rem;
+        background: rgba(255, 255, 255, 0.16);
+      }
+
+      .method-card span {
+        color: var(--muted);
+        font-family: var(--font-display);
+        font-size: 0.72rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+      }
+
+      .method-card h3 {
+        font-family: var(--font-display);
+        font-size: 1.5rem;
+        line-height: 1;
+      }
+
+      .method-card p {
+        color: var(--muted);
+        font-size: 0.98rem;
+        line-height: 1.62;
+      }
+
+      .cta {
+        display: grid;
+        gap: 1rem;
+        align-items: center;
+        margin-top: clamp(1.5rem, 4vw, 2.5rem);
+        padding: clamp(1.5rem, 3vw, 2.4rem);
+      }
+
+      .cta h2 {
+        font-family: var(--font-display);
+        font-size: clamp(1.8rem, 3vw, 3rem);
+        line-height: 1.02;
+      }
+
+      .cta__actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.85rem;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 2.9rem;
+        padding: 0.7rem 1rem;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.2);
+      }
+
+      .button--accent {
+        background:
+          linear-gradient(90deg, rgba(255, 47, 179, 0.22), rgba(0, 216, 255, 0.22)),
+          rgba(255, 255, 255, 0.14);
+      }
+
+      @media (max-width: 900px) {
+        .statement {
+          grid-template-columns: 1fr;
+        }
+
+        .method__grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 700px) {
+        .topbar {
+          grid-template-columns: 1fr;
+          justify-items: center;
+        }
+
+        .topbar__nav {
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="topbar__brand" href="/#pulse" aria-label="Return to Slow Drag Studio home">
+        <img src="./Logo%20and%20font/fulllogo.png" alt="Slow Drag Studio" />
+      </a>
+      <nav class="topbar__nav" aria-label="Primary">
+        <a href="/#pulse">Pulse</a>
+        <a href="/#practice">Practice</a>
+        <a href="/#work">Work</a>
+        <a href="/#archive">Archive</a>
+        <a href="./about-us.html" aria-current="page">About Us</a>
+        <a href="./client-work.html">Client Work</a>
+        <a href="/#begin">Begin</a>
+      </nav>
+      <button class="theme-toggle" type="button" aria-pressed="false">Dark</button>
+    </header>
+
+    <main class="shell">
+      <section class="hero">
+        <p class="eyebrow">About Slow Drag</p>
+        <h1>A studio for work that needs pulse.</h1>
+        <p>
+          Slow Drag Studio moves across film, brand systems, graphic design, writing, motion, and digital surfaces. The work is
+          built to hold emotional precision and strategic clarity at the same time, so the idea stays authored from the first
+          conversation to the final release.
+        </p>
+      </section>
+
+      <section class="statement">
+        <div class="statement__copy">
+          <p class="eyebrow">What We Protect</p>
+          <h2>Atmosphere, authorship, and the reason the work exists in the first place.</h2>
+          <p>
+            Slow Drag is not organized like a factory line. Projects move through a shared creative language where direction,
+            design, editing, and digital execution keep contaminating each other in productive ways. That overlap is the point.
+          </p>
+        </div>
+        <div class="signal-list" aria-label="Studio signals">
+          <article class="signal">
+            <strong>Direction</strong>
+            <span>Visual thinking that gives a project a spine before the rollout starts.</span>
+          </article>
+          <article class="signal">
+            <strong>Design</strong>
+            <span>Graphic systems, identities, and interfaces that feel authored instead of assembled.</span>
+          </article>
+          <article class="signal">
+            <strong>Delivery</strong>
+            <span>Films, decks, campaigns, and web experiences that keep the brand language alive in motion.</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="method">
+        <div class="method__intro">
+          <p class="eyebrow">How We Move</p>
+          <h2>One practice, multiple forms.</h2>
+          <p>
+            The medium changes from project to project, but the internal method stays stable: listen closely, find the actual
+            tension, and turn that tension into a visual and narrative system that can travel.
+          </p>
+        </div>
+        <div class="method__grid">
+          <article class="method-card">
+            <span>01</span>
+            <h3>Listen</h3>
+            <p>Every project starts with conversation rather than assumption, so the work answers a real need instead of a generic brief.</p>
+          </article>
+          <article class="method-card">
+            <span>02</span>
+            <h3>Shape</h3>
+            <p>Direction, writing, and visual systems are developed together so the identity can stay coherent across formats.</p>
+          </article>
+          <article class="method-card">
+            <span>03</span>
+            <h3>Release</h3>
+            <p>The final output is built to feel alive on screen, in decks, in campaigns, and inside the practical realities of rollout.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="cta">
+        <p class="eyebrow">Begin</p>
+        <h2>If the idea feels difficult to contain, it is probably in the right place.</h2>
+        <p>
+          Bring the early instinct, the half-shaped brief, or the project that needs film, design, motion, and digital craft to
+          hold together as one.
+        </p>
+        <div class="cta__actions">
+          <a class="button button--accent" href="/#begin">Begin a conversation</a>
+          <a class="button" href="./client-work.html">See client work</a>
+          <a class="button" href="/#pulse">Return to homepage</a>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const root = document.documentElement;
+      const themeToggle = document.querySelector(".theme-toggle");
+
+      function readSavedTheme() {
+        try {
+          return localStorage.getItem("slowdrag-theme");
+        } catch {
+          return null;
+        }
+      }
+
+      function saveTheme(theme) {
+        try {
+          localStorage.setItem("slowdrag-theme", theme);
+        } catch {
+          return;
+        }
+      }
+
+      function setTheme(theme) {
+        const nextTheme = theme === "dark" ? "dark" : "light";
+        const isDark = nextTheme === "dark";
+        root.dataset.theme = nextTheme;
+        themeToggle.textContent = isDark ? "Light" : "Dark";
+        themeToggle.setAttribute("aria-pressed", String(isDark));
+        themeToggle.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
+        saveTheme(nextTheme);
+      }
+
+      themeToggle?.addEventListener("click", () => {
+        setTheme(root.dataset.theme === "dark" ? "light" : "dark");
+      });
+
+      setTheme(readSavedTheme());
+    </script>
+  </body>
+</html>

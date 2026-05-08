@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy | Slow Drag Studio</title>
+    <meta
+      name="description"
+      content="Privacy note for Slow Drag Studio inquiries, stored conversation details, and site preferences."
+    />
+    <link rel="canonical" href="https://slowdragstudio.com/privacy.html" />
+    <link rel="icon" type="image/png" href="/Logo%20and%20font/logo.png" />
+    <link rel="apple-touch-icon" href="/Logo%20and%20font/logo.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta property="og:site_name" content="Slow Drag Studio" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Privacy | Slow Drag Studio" />
+    <meta property="og:description" content="How Slow Drag Studio handles inquiries submitted through the website." />
+    <meta property="og:url" content="https://slowdragstudio.com/privacy.html" />
+    <meta property="og:image" content="https://slowdragstudio.com/Logo%20and%20font/fulllogo.png" />
+    <meta property="og:image:alt" content="Slow Drag Studio wordmark" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Privacy | Slow Drag Studio" />
+    <meta name="twitter:description" content="How Slow Drag Studio handles inquiries submitted through the website." />
+    <meta name="twitter:image" content="https://slowdragstudio.com/Logo%20and%20font/fulllogo.png" />
+    <style>
+      @font-face {
+        font-family: "OffBit Body";
+        src: url("./Logo%20and%20font/OffBit-Regular.ttf") format("truetype");
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "OffBit 101";
+        src: url("./Logo%20and%20font/OffBit-101.ttf") format("truetype");
+        font-display: swap;
+      }
+
+      :root {
+        --bg: #fff23d;
+        --ink: #1b003f;
+        --muted: rgba(27, 0, 63, 0.68);
+        --panel: rgba(255, 252, 232, 0.72);
+        --line: rgba(27, 0, 63, 0.18);
+        --font-display: "OffBit 101", "OffBit Body", monospace;
+        --font-body: "OffBit Body", "Courier New", monospace;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        color: var(--ink);
+        font-family: var(--font-body);
+        background:
+          radial-gradient(circle at 12% 18%, rgba(255, 47, 179, 0.2), transparent 22rem),
+          radial-gradient(circle at 88% 12%, rgba(0, 216, 255, 0.24), transparent 20rem),
+          linear-gradient(135deg, var(--bg), #fffce8);
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .topbar,
+      .shell {
+        width: min(72rem, calc(100% - 2rem));
+        margin: 0 auto;
+      }
+
+      .topbar {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 1.2rem 0;
+      }
+
+      .topbar img {
+        display: block;
+        width: min(11rem, 42vw);
+        height: auto;
+      }
+
+      .topbar nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.85rem;
+        font-size: 0.84rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .shell {
+        padding: clamp(3rem, 8vw, 6rem) 0;
+      }
+
+      .panel {
+        display: grid;
+        gap: 1.2rem;
+        padding: clamp(1.4rem, 4vw, 3rem);
+        border: 1px solid var(--line);
+        background: var(--panel);
+        backdrop-filter: blur(14px);
+      }
+
+      h1,
+      h2,
+      p {
+        margin: 0;
+      }
+
+      h1,
+      h2 {
+        font-family: var(--font-display);
+        line-height: 1;
+      }
+
+      h1 {
+        font-size: clamp(2.4rem, 8vw, 5.5rem);
+      }
+
+      h2 {
+        margin-top: 1rem;
+        font-size: clamp(1.35rem, 3vw, 2rem);
+      }
+
+      p,
+      li {
+        max-width: 64ch;
+        color: var(--muted);
+        font-size: 1rem;
+        line-height: 1.65;
+      }
+
+      ul {
+        display: grid;
+        gap: 0.55rem;
+        margin: 0;
+        padding-left: 1.2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <a href="/" aria-label="Return to Slow Drag Studio home">
+        <img src="./Logo%20and%20font/fulllogo.png" alt="Slow Drag Studio" />
+      </a>
+      <nav aria-label="Primary">
+        <a href="/">Home</a>
+        <a href="./about-us.html">About</a>
+        <a href="./client-work.html">Client Work</a>
+        <a href="./terms.html">Terms</a>
+      </nav>
+    </header>
+
+    <main class="shell">
+      <section class="panel">
+        <p>Last updated: April 24, 2026</p>
+        <h1>Privacy</h1>
+        <p>
+          Slow Drag Studio uses inquiry details submitted through the Begin form to understand the project and respond to the person who reached out.
+        </p>
+
+        <h2>What the inquiry form stores</h2>
+        <ul>
+          <li>Name, email, project need, timeline, and brief.</li>
+          <li>The page where the inquiry was submitted.</li>
+          <li>A timestamp created when the inquiry is saved.</li>
+        </ul>
+
+        <h2>How it is used</h2>
+        <p>
+          Inquiry details are used to review the request, reply, and keep a basic conversation archive. Slow Drag Studio does not sell inquiry details.
+        </p>
+
+        <h2>Site preferences</h2>
+        <p>
+          The site may remember the light or dark theme choice in browser local storage. The governed site state does not add analytics cookies or advertising pixels.
+        </p>
+
+        <h2>Contact</h2>
+        <p>
+          To ask about an inquiry already submitted, start a new conversation through the website and mention the earlier message.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

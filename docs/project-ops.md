@@ -4,7 +4,7 @@
 
 - Project key: slowdrag-site
 - Project type: static-site
-- Source folder: C:\Users\tenet\OneDrive - Tenet Mediaverse\Tenet Mediaverse\SlowDrag Studios\Slowdrag website buillding
+- Source folder: C:\Users\dhruv\OneDrive - Tenet Mediaverse\Tenet Mediaverse\SlowDrag Studios\Slowdrag website buillding
 - Public URL: https://slowdragstudio.com/
 - Repo URL: https://github.com/tmediaverse/slowdrag-site
 

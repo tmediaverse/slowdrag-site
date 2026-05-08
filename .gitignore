@@ -10,10 +10,16 @@ config/deploy.secrets.json
 *_ftp.txt
 hostinger_ftp.txt
 
+# Public conversation endpoint runtime sheets
+site/conversations/excel_sheets/*.csv
+site/conversations/excel_sheets/submissions/*.csv
+
 # OS / editor noise
 .DS_Store
 Thumbs.db
 desktop.ini
+*.pyc
+__pycache__/
 
 # Future local-only working areas
 dist/
