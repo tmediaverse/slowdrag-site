@@ -14,6 +14,9 @@ hostinger_ftp.txt
 site/conversations/excel_sheets/*.csv
 site/conversations/excel_sheets/submissions/*.csv
 
+# Deployed client-work PDFs are hosted on Hostinger; originals stay in local client archives.
+site/Client work/*.pdf
+
 # OS / editor noise
 .DS_Store
 Thumbs.db

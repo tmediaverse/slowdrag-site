@@ -3,99 +3,217 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Slow Drag Studio | About Page Refresh</title>
-    <meta name="robots" content="noindex, nofollow" />
-    <meta
-      name="description"
-      content="The Slow Drag Studio About page is being refreshed and is temporarily unavailable."
-    />
-    <link rel="canonical" href="https://slowdragstudio.com/" />
-    <link rel="icon" type="image/png" href="/Logo%20and%20font/logo.png" />
-    <style>
-      @font-face {
-        font-family: "OffBit Body";
-        src: url("./Logo%20and%20font/OffBit-Regular.ttf") format("truetype");
-        font-display: swap;
-      }
-
-      @font-face {
-        font-family: "OffBit 101";
-        src: url("./Logo%20and%20font/OffBit-101.ttf") format("truetype");
-        font-display: swap;
-      }
-
-      :root {
-        --bg: #f5ead2;
-        --text: #13110d;
-        --muted: rgba(19, 17, 13, 0.68);
-        --line: rgba(19, 17, 13, 0.18);
-        --pink: #ff2fb3;
-        --blue: #00d8ff;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      body {
-        margin: 0;
-        min-height: 100vh;
-        display: grid;
-        place-items: center;
-        padding: 28px;
-        color: var(--text);
-        background:
-          linear-gradient(135deg, rgba(255, 47, 179, 0.18), transparent 36%),
-          linear-gradient(315deg, rgba(0, 216, 255, 0.18), transparent 34%),
-          var(--bg);
-        font-family: "OffBit Body", "Courier New", monospace;
-      }
-
-      main {
-        width: min(720px, 100%);
-        border: 1px solid var(--line);
-        background: rgba(255, 248, 224, 0.78);
-        padding: clamp(28px, 6vw, 56px);
-      }
-
-      img {
-        width: min(220px, 70vw);
-        height: auto;
-        display: block;
-        margin-bottom: 40px;
-      }
-
-      p {
-        margin: 0 0 18px;
-        color: var(--muted);
-        font-size: clamp(1rem, 2vw, 1.15rem);
-        line-height: 1.6;
-      }
-
-      h1 {
-        margin: 0 0 20px;
-        max-width: 12ch;
-        font-family: "OffBit 101", "OffBit Body", monospace;
-        font-size: clamp(3.4rem, 12vw, 8rem);
-        line-height: 0.82;
-        letter-spacing: 0;
-      }
-
-      a {
-        color: var(--text);
-        text-decoration-color: var(--pink);
-        text-underline-offset: 0.22em;
-      }
-    </style>
+    <title>Slow Drag Studio - About Us</title>
+    <link rel="stylesheet" href="./about-us.css?v=20260422-nav980" />
   </head>
   <body>
-    <main>
-      <img src="./Logo%20and%20font/fulllogo.png" alt="Slow Drag Studio" />
-      <h1>Page being refreshed.</h1>
-      <p>
-        This About page is temporarily offline while the current Slow Drag Studio content is restored.
-      </p>
-      <p><a href="/">Return to the homepage</a></p>
+    <canvas id="webgl-canvas"></canvas>
+    <div class="cursor" aria-hidden="true">
+      <span class="cursor__eye">
+        <svg class="cursor__svg" viewBox="0 0 84 52" role="presentation" aria-hidden="true">
+          <polygon class="cursor__sclera" points="14,26 22,18 31,13 42,11 53,13 62,18 70,26 62,34 53,39 42,41 31,39 22,34" />
+          <polyline class="cursor__liner" points="14,26 22,18 31,13 42,11 53,13 62,18 70,26" />
+          <polyline class="cursor__outline" points="14,26 22,34 31,39 42,41 53,39 62,34 70,26" />
+          <polyline class="cursor__lash" points="24,13 21,5" />
+          <polyline class="cursor__lash" points="38,10 38,3" />
+          <polyline class="cursor__lash" points="60,16 68,10" />
+          <rect class="cursor__iris" x="35" y="18" width="16" height="16" />
+          <rect class="cursor__pupil" x="40" y="21" width="6" height="10" />
+          <rect class="cursor__glint" x="37" y="20" width="3" height="3" />
+        </svg>
+      </span>
+    </div>
+
+    <header class="topbar">
+      <a class="topbar__brand" href="./slowdragv1.html#pulse" aria-label="Slow Drag Studio home">
+        <img src="./Logo%20and%20font/fulllogo.png" alt="Slow Drag Studio" />
+      </a>
+      <nav class="topbar__nav" id="primaryNav" aria-label="Primary">
+        <a href="./slowdragv1.html#pulse">Pulse</a>
+        <a href="./slowdragv1.html#practice">Practice</a>
+        <a href="./slowdragv1.html#work">Work</a>
+        <a href="./slowdragv1.html#archive">Archive</a>
+        <a href="./about-us.html">About Us</a>
+        <a href="./client-work.html">Client Work</a>
+        <a href="./slowdragv1.html#begin">Begin</a>
+      </nav>
+      <div class="topbar__actions">
+        <a class="topbar__cta" href="#contact">Let's Talk</a>
+        <button class="nav-toggle" type="button" aria-label="Open navigation" aria-controls="primaryNav" aria-expanded="false">
+          <span class="nav-toggle__line" aria-hidden="true"></span>
+          <span class="nav-toggle__line" aria-hidden="true"></span>
+          <span class="nav-toggle__line" aria-hidden="true"></span>
+        </button>
+        <button class="theme-toggle" type="button" aria-pressed="false">Dark</button>
+      </div>
+    </header>
+
+    <main id="scroll-container">
+      <section class="section section--hero" id="hero">
+        <div class="section__inner section__inner--hero">
+          <p class="section__kicker reveal">Scroll To Explore</p>
+          <h1 class="hero-title reveal">
+            <span>A creative studio</span>
+            <span>crafting your dreams.</span>
+          </h1>
+          <p class="hero-copy reveal">
+            Slow Drag Studio builds films, identities, graphic systems, and digital experiences that move with rhythm instead of haste. We work across direction, writing, technology, and design so the idea stays emotionally sharp from instinct to release.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section--founders" id="founders">
+        <div class="section__inner section__inner--founders">
+          <div class="founders-head">
+            <h2 class="section-title founders-title reveal">Co-Creative Partners</h2>
+            <p class="section-body founders-intro reveal">
+              Slow Drag is shaped through the overlap between direction, design language, writing, image-making, and digital systems. The studio is led by two co-creative partners whose distinct instincts push the same method forward from different edges.
+            </p>
+          </div>
+
+          <div class="founders-grid">
+            <article class="founder-panel founder-panel--sujith reveal">
+              <div class="founder-panel__meta">
+                <span>001</span>
+                <span>Film / Brand Worlds / Visual Strategy</span>
+              </div>
+              <figure class="founder-panel__portrait" aria-hidden="true">
+                <img src="./Logo%20and%20font/fulllogo.png" alt="" loading="lazy" />
+              </figure>
+              <h3 class="founder-panel__name">Sujith K.</h3>
+              <p class="founder-panel__role">Co-Creative Partner / Creative Director</p>
+              <p class="founder-panel__bio">
+                Sujith shapes the emotional spine of Slow Drag. He works where instinct turns into direction, building films, brand worlds, and visual systems that hold narrative tension without losing clarity.
+              </p>
+              <p class="founder-panel__focus">Direction. Film. Narrative tension. Brand worlds. Visual strategy.</p>
+            </article>
+
+            <article class="founder-panel founder-panel--shatakshi reveal">
+              <div class="founder-panel__meta">
+                <span>002</span>
+                <span>Writing / Design Language / Spatial Thinking</span>
+              </div>
+              <figure class="founder-panel__portrait" aria-hidden="true">
+                <img src="./Logo%20and%20font/fulllogo.png" alt="" loading="lazy" />
+              </figure>
+              <h3 class="founder-panel__name">Shatakshi P.</h3>
+              <p class="founder-panel__role">Co-Creative Partner / Creative Director</p>
+              <p class="founder-panel__bio">
+                Shatakshi shapes how Slow Drag feels in language, form, and experience. Her practice binds writing, design language, graphic systems, and spatial sensitivity into one authored point of view.
+              </p>
+              <p class="founder-panel__focus">Writing. Design language. Graphic systems. Spatial thinking. Experience.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--statement" id="statement">
+        <div class="section__inner section__inner--statement">
+          <div class="statement-copy reveal">
+            <p class="section__kicker">What We Build</p>
+            <h2 class="section-title">For brands, artists, institutions, and movements that need more than aesthetic satisfaction.</h2>
+            <p class="section-body">
+              Slow Drag combines film, branding, graphic design, writing, spatial thinking, and digital systems into one production language. The goal is not simply to make things look good. The goal is to create work that remembers why it exists.
+            </p>
+          </div>
+          <div class="statement-rail reveal">
+            <article class="statement-rail__item">
+              <span>01</span>
+              <p>Film direction rooted in emotion, rhythm, and visual argument.</p>
+            </article>
+            <article class="statement-rail__item">
+              <span>02</span>
+              <p>Brand systems that feel authored from manifesto to rollout.</p>
+            </article>
+            <article class="statement-rail__item">
+              <span>03</span>
+              <p>Digital experiences that hold atmosphere instead of flattening it.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--expertise" id="expertise">
+        <div class="section__inner section__inner--expertise">
+          <div class="expertise-head reveal">
+            <p class="section__kicker">Area Of Expertise</p>
+            <h2 class="expertise-title">Multidisciplinary practice across strategy, creative, technology, and production.</h2>
+          </div>
+          <div class="expertise-list">
+            <article class="expertise-item reveal">
+              <div class="expertise-item__code">S</div>
+              <div class="expertise-item__body">
+                <h3>Strategy</h3>
+                <ul>
+                  <li>Discovery</li>
+                  <li>Research</li>
+                  <li>Positioning</li>
+                  <li>Narrative Architecture</li>
+                </ul>
+              </div>
+            </article>
+            <article class="expertise-item reveal">
+              <div class="expertise-item__code">C</div>
+              <div class="expertise-item__body">
+                <h3>Creative</h3>
+                <ul>
+                  <li>Art Direction</li>
+                  <li>Film Direction</li>
+                  <li>Brand Design</li>
+                  <li>Graphic Systems</li>
+                </ul>
+              </div>
+            </article>
+            <article class="expertise-item reveal">
+              <div class="expertise-item__code">T</div>
+              <div class="expertise-item__body">
+                <h3>Technology</h3>
+                <ul>
+                  <li>Interactive Design</li>
+                  <li>Frontend Development</li>
+                  <li>Motion Systems</li>
+                  <li>Digital Prototyping</li>
+                </ul>
+              </div>
+            </article>
+            <article class="expertise-item reveal">
+              <div class="expertise-item__code">P</div>
+              <div class="expertise-item__body">
+                <h3>Production</h3>
+                <ul>
+                  <li>Production</li>
+                  <li>Post-Production</li>
+                  <li>Rollout Systems</li>
+                  <li>Creative Delivery</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--contact" id="contact">
+        <div class="section__inner section__inner--contact">
+          <p class="section__kicker reveal">Is Your Big Idea Ready To Go Slow?</p>
+          <h2 class="contact-title reveal">
+            <span>LET'S WORK</span>
+            <span>TOGETHER</span>
+          </h2>
+          <p class="contact-copy reveal">
+            Bring the brief, the half-formed instinct, or the impossible ask. Slow Drag is built for projects that need direction, design, digital craft, and emotional precision to move as one.
+          </p>
+          <div class="contact-actions reveal">
+            <a class="contact-link" href="./client-work.html">See Client Work</a>
+            <a class="contact-link contact-link--ghost" href="./slowdragv1.html#begin">Begin With Slow Drag</a>
+            <a class="contact-link contact-link--ghost" href="./slowdragv1.html#pulse">Back To Pulse</a>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/three@0.164.1/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="./about-us.js?v=20260422-nav980"></script>
   </body>
 </html>
